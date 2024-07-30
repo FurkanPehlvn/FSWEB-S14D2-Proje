@@ -16,7 +16,7 @@ public class Main {
         Lamp lamp = new Lamp(LampType.LAVA,true,2);
         Wardrobe wardrobe = new Wardrobe(2,2,45.0);
         Carpet carpet=new Carpet(3,3,PaintColor.GREEN);
-        Bedroom bedroom= new Bedroom("King Room",wall1,wall2,wall3,wall4,ceiling,bed,lamp,wardrobe,carpet);
+        Bedroom bedroom= new Bedroom("King Room",wall1,wall2,wall3,wall4,ceiling,carpet,bed,lamp,wardrobe);
 
         System.out.println(bedroom);
 

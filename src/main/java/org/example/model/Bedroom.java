@@ -1,53 +1,18 @@
 package org.example.model;
 
-public class Bedroom {
-    private String name;
-    private Wall Wall1;
-    private Wall Wall2;
-    private Wall Wall3;
-    private Wall Wall4;
-    private Ceiling ceiling;
+public class Bedroom extends Room{
+
     private Bed bed;
     private Lamp lamp;
     private Wardrobe wardrobe;
-    private Carpet carpet;
 
-    public Bedroom(String name, Wall wall1, Wall wall2, Wall wall3, Wall wall4, Ceiling ceiling, Bed bed, Lamp lamp, Wardrobe wardrobe, Carpet carpet) {
-        this.name = name;
-        Wall1 = wall1;
-        Wall2 = wall2;
-        Wall3 = wall3;
-        Wall4 = wall4;
-        this.ceiling = ceiling;
+    public Bedroom(String name, Wall wall1, Wall wall2, Wall wall3, Wall wall4, Ceiling ceiling, Carpet carpet, Bed bed, Lamp lamp, Wardrobe wardrobe) {
+        super(name, wall1, wall2, wall3, wall4, ceiling, carpet);
         this.bed = bed;
         this.lamp = lamp;
         this.wardrobe = wardrobe;
-        this.carpet = carpet;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Wall getWall1() {
-        return Wall1;
-    }
-
-    public Wall getWall2() {
-        return Wall2;
-    }
-
-    public Wall getWall3() {
-        return Wall3;
-    }
-
-    public Wall getWall4() {
-        return Wall4;
-    }
-
-    public Ceiling getCeiling() {
-        return ceiling;
-    }
 
     public Bed getBed() {
         return bed;
@@ -61,21 +26,19 @@ public class Bedroom {
         return wardrobe;
     }
 
-    public Carpet getCarpet() {
-        return carpet;
-    }
+
     public String toString() {
         return "Bedroom{" +
-                "name='" + name + '\'' +
-                ", wall1=" + this.Wall1 +
-                ", wall2=" + this.Wall2 +
-                ", wall3=" + this.Wall3 +
-                ", wall4=" + this.Wall4 +
-                ", ceiling=" + ceiling +
+                "name='" + getName() + '\'' +
+                ", wall1=" + getWall1() +
+                ", wall2=" + getWall2() +
+                ", wall3=" + getWall3() +
+                ", wall4=" + getWall4() +
+                ", ceiling=" + getCeiling() +
+                ", carpet=" + getCarpet() +
                 ", bed=" + bed +
                 ", lamp=" + lamp +
                 ", wardrobe=" + wardrobe +
-                ", carpet=" + carpet +
                 '}';
     }
 
